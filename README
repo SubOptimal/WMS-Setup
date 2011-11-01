@@ -1,0 +1,57 @@
+WMS-Setup is a setup wizard for the HSTI Mobostick(tm) and Wirelss Media Stick(tm)
+
+   http://hsti.com/mobostick
+   http://hsti.com/wirelessmediastick
+
+WMS-Setup is mainly intended for Linux users who do not want to struggle
+with the console or find the manual ACSII to HEX conversation not convenient.
+The usage itself is very similar to the wizards for Windows or Mac PC's provided
+with the sticks. Anyway both sticks work well in a Linux only environment.
+
+HOWTO - build and run
+---------------------
+
+1) get the source (via git or the download option)
+
+2a) build and run with ant
+~$> cd WMS-Setup
+~$> ant run
+
+2b) build and run with Netbeans
+- open the project in Netbeans
+- SHIFT-F11 (clean and build)
+- F6 (run project)
+
+
+HOWTO - use
+-----------
+
+- enter the necessary data
+   MAC ID         : the MAC address of the wireless access point / router
+                    example: 00CAFEBABE00
+   SSID           : the SSID of the wireless network
+                    example: my_home_wifi
+   password       : WIFI passphrase to connect to the network
+   security type  : one of "open", "WEP", "WPA", "WPA2"
+   encryption type: one of "n/a", "TKIP", "AES"
+
+- mount the setup drive provided by the stick
+  Mobostick           : the drive label is "Setup"
+  Wireless Media Stick: the drive label is "WMS Setup"
+
+- click on the "save" button in WMS-Setup and select the related setup path
+  (the mount point names might differ on your Linux distribution)
+  Mobostick           : /mount/Setup/wms
+  Wirelss Media Stick : /mount/WMS Setup/wms
+
+Short after you clicked on the OK button the stick will be unmounted and reboot
+automatically. As soon the LED stops flashing you can configure the stick via
+the buildin webfrontend (only Wireless Media Stick) or the related Android apps.
+
+
+disclaimer
+----------
+The names "Mobostick" and "Wireless Media Stick" are trademarks of their owner
+Home ServerTechnologies Inc. (HSTI).
+WMS-Setup wizard is not supported by Home Server Technologies Inc.. Please don't
+bother their support. If you have some trouble drop me an email.
