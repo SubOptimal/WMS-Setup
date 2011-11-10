@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project basedir="." default="main" name="WMS-Setup">
 
-	<target name="prepare">
-		<mkdir dir="build" />
-		<mkdir dir="build/images" />
-		<mkdir dir="dist" />
-	</target>
+    <target name="prepare">
+        <mkdir dir="build" />
+        <mkdir dir="build/images" />
+        <mkdir dir="dist" />
+    </target>
 
-	<target name="clean">
-		<delete dir="build" quiet="true" />
-		<delete dir="dist" quiet="true" />
-	</target>
+    <target name="clean">
+        <delete dir="build" quiet="true" />
+        <delete dir="dist" quiet="true" />
+    </target>
 
-	<target name="compile" depends="prepare">
-		<javac srcdir="src" 
+    <target name="compile" depends="prepare">
+        <javac srcdir="src"
            destdir="build/" 
            debug="true"
            source="1.5"
-           target="1.5">
-		</javac>
-	</target>
+           target="1.5"
+           includeantruntime="false">
+            <compilerarg value="-Xlint:deprecation" />
+        </javac>
+    </target>
 
-	<target name="main">
-		<antcall target="compile" />
-		<antcall target="createExecutable" />
-	</target>
+    <target name="main">
+        <antcall target="compile" />
+        <antcall target="createExecutable" />
+    </target>
 
-        <target name="run" depends="compile, createExecutable">
-            <java jar="dist/WMS-Setup.jar"
+    <target name="run" depends="compile, createExecutable">
+        <java jar="dist/WMS-Setup.jar"
                 fork="true"
                 failonerror="true"
             >
-                <classpath>
-                    <pathelement location="dist/test.jar"/>
-                    <pathelement path="${java.class.path}"/>
-                </classpath>
-            </java>
-        </target>
+            <classpath>
+                <pathelement location="dist/test.jar"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+        </java>
+    </target>
             
-	<target name="createExecutable" depends="compile">
-		<jar destfile="dist/WMS-Setup.jar" update="false" index="false">
-			<fileset dir="build" />
-			<manifest>
-				<attribute name="Main-Class" value="sub.optimal.wms.MainFrame" />
-			</manifest>
-		</jar>
-	</target>
+    <target name="createExecutable" depends="compile">
+        <jar destfile="dist/WMS-Setup.jar" update="false" index="false">
+            <fileset dir="build" />
+            <manifest>
+                <attribute name="Main-Class" value="sub.optimal.wms.MainFrame" />
+            </manifest>
+        </jar>
+    </target>
 
 </project>

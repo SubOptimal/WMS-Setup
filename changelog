@@ -1,0 +1,11 @@
+-- v0.1
+
+  * added hide/unhide checkbox for password field
+  * added input filter for the MAC address field
+  * added tooltips for the text fields
+  * added changelog file
+  * fixed few typos
+ 
+-- v0.1.alpha
+
+  * initial version

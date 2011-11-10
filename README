@@ -11,7 +11,7 @@ with the sticks. Anyway both sticks work well in a Linux only environment.
 HOWTO - build and run
 ---------------------
 
-1) get the source (via git or the download option)
+1) get the source (via git or the download option on the page)
 
 2a) build and run with ant
 ~$> cd WMS-Setup
@@ -27,8 +27,8 @@ HOWTO - use
 -----------
 
 - enter the necessary data
-   MAC ID         : the MAC address of the wireless access point / router
-                    example: 00CAFEBABE00
+   MAC address    : the MAC address of the wireless access point
+                    example: 00:CA:FE:BA:BE:00
    SSID           : the SSID of the wireless network
                     example: my_home_wifi
    password       : WIFI passphrase to connect to the network
@@ -39,12 +39,13 @@ HOWTO - use
   Mobostick           : the drive label is "Setup"
   Wireless Media Stick: the drive label is "WMS Setup"
 
-- click on the "save" button in WMS-Setup and select the related setup path
-  (the mount point names might differ on your Linux distribution)
-  Mobostick           : /mount/Setup/wms
-  Wirelss Media Stick : /mount/WMS Setup/wms
+- click on the "save" button in WMS-Setup and select the related configuration
+   path
+  (the mount point /media might differ on your Linux distribution)
+  Mobostick           : /media/Setup/wms
+  Wirelss Media Stick : /media/WMS Setup/wms
 
-Short after you clicked on the OK button the stick will be unmounted and reboot
+Shortly after you clicked on the OK button the stick will be unmounted and reboot
 automatically. As soon the LED stops flashing you can configure the stick via
 the buildin webfrontend (only Wireless Media Stick) or the related Android apps.
 
