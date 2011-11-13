@@ -14,13 +14,24 @@ HOWTO - build and run
 1) get the source (via git or the download option on the page)
 
 2a) build and run with ant
-~$> cd WMS-Setup
+~$> cd WMS-Setup-source-directory
 ~$> ant run
 
 2b) build and run with Netbeans
 - open the project in Netbeans
 - SHIFT-F11 (clean and build)
 - F6 (run project)
+
+2c) build and run "the manual way"
+Linux users:
+- cd WMS-Setup-source-directory
+- ./build_manual.sh
+- ./wms-setup.sh
+
+Windows users:
+- cd WMS-Setup-source-directory
+- .\build_manual.cmd
+- .\wms-setup.cmd
 
 
 HOWTO - use

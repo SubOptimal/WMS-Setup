@@ -3,7 +3,6 @@
 
     <target name="prepare">
         <mkdir dir="build" />
-        <mkdir dir="build/images" />
         <mkdir dir="dist" />
     </target>
 
@@ -39,7 +38,7 @@
             </classpath>
         </java>
     </target>
-            
+
     <target name="createExecutable" depends="compile">
         <jar destfile="dist/WMS-Setup.jar" update="false" index="false">
             <fileset dir="build" />

@@ -69,11 +69,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         cbSecurityType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "open", "WEP", "WPA", "WPA2" }));
         cbSecurityType.setSelectedIndex(3);
-        cbSecurityType.setToolTipText("security algorithm used to protect the WiFi network");
+        cbSecurityType.setToolTipText("security protocol used to protect the WiFi network");
 
         cbEncryptType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "TKIP", "AES", "n/a" }));
         cbEncryptType.setSelectedIndex(1);
-        cbEncryptType.setToolTipText("encryption standard used to protect the WiFi network");
+        cbEncryptType.setToolTipText("encryption algorithm used to protect the WiFi network");
 
         lblMacAddr.setText("MAC address");
 
@@ -96,7 +96,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         tfSSID.setToolTipText("SSID of the WiFi network");
 
-        tfPassword.setToolTipText("password to connect to the WiFi network");
+        tfPassword.setToolTipText("password/pass phrase to connect to the WiFi network");
 
         btnSave.setText("save");
         btnSave.setToolTipText("save the configuration in the configuration dierectory - e.g. /media/Setup/wms, /media/WMS Setup/wms");
@@ -149,12 +149,12 @@ public class MainFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(cbEncryptType, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cbSecurityType, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(tfMacAddr, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                            .addComponent(tfSSID, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                            .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)))
+                            .addComponent(tfMacAddr, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                            .addComponent(tfSSID, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                            .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(cbHidePasswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
                         .addComponent(btnSave)))
                 .addContainerGap())
         );
